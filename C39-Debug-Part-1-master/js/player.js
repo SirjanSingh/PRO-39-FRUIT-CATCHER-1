@@ -36,5 +36,24 @@ class Player {
         })
     }
 
-    
+    getInfo() {
+        var NameInfoRef1 = database.ref('players/player1/name');
+        NameInfoRef1.on("value", (data) => {
+        player1Name = data.val();
+        })
+        var NameInfoRef2 = database.ref('players/player2/name');
+        NameInfoRef2.on("value", (data) => {
+        player2Name = data.val();
+        })
+
+        var scoreInfoRef1 = database.ref('players/player1/score');
+        scoreInfoRef1.on("value", (data) => {
+        score1 = data.val();
+        })
+
+        var scoreInfoRef2 = database.ref('players/player2/score');
+        scoreInfoRef2.on("value", (data) => {
+        score2 = data.val();
+        })
+    }
 }

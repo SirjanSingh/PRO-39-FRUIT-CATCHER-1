@@ -102,6 +102,8 @@ class Game{
              }
              
              
+             text(player1Name + " :" + score1,100,100)
+             text(player2Name + " :" + score2,100,150)
                  
                   if (player.index !== null) {
                      //fill code here, to destroy the objects.
@@ -111,11 +113,11 @@ class Game{
                     for(var i =0 ; i<fruitGroup.length; i++){
                         if(fruitGroup.get(i).isTouching(players)){
                         fruitGroup.get(i).destroy();
-                        player.score+=2;
+                        player.score+=1;
                         player.update();
                         }
                     }
-                    //console.log("sirjan")
+                    console.log(player.score)
                 
                   }
                 
